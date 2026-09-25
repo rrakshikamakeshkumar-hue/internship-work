@@ -1,90 +1,115 @@
-Daily Progress — Go/Golang
+Daily Progress--25 September 2026
 
-Date--24 September 2026
+1).What I Worked On Today
 
-1. What I Worked on Today
+* Learned the basics of **React.js**.
+* Learned the basics of **PostgreSQL**.
+* Practiced simple React components and SQL queries.
 
-Today, I started learning the fundamentals of **Go (Golang)**. I focused on understanding the basic syntax, program structure, variables, functions, structs, interfaces, packages, and error handling.
+2).What I Learned
 
-I also got an introduction to Go's concurrency concepts such as **goroutines and channels**, along with basic concepts of HTTP servers and REST APIs.
+i).React
 
-2. What I Learned
+* What React is.
+* Components.
+* JSX.
+* Props.
+* State.
+* `useState()`.
+* Event handling.
+* Basic React project structure.
 
-Today I learned:
+ii).PostgreSQL
 
-* What Go/Golang is and why it is used.
-* Basic Go program structure and syntax.
-* Variables and data types.
-* Functions and parameters.
-* Structs and interfaces.
-* Packages and modules.
-* Error handling in Go.
-* Basic pointers and memory concepts.
-* Goroutines for concurrent execution.
-* Channels for communication between goroutines.
-* Basics of HTTP servers.
-* REST API concepts.
-* JSON handling in Go.
-* Basic idea of connecting Go applications with PostgreSQL.
+* What PostgreSQL is.
+* Database and tables.
+* Data types.
+* Primary keys.
+* Basic SQL commands.
+* `CREATE`, `INSERT`, `SELECT`, `UPDATE`, and `DELETE`.
 
-3. What I Implemented
+3).What I Implemented
 
-I practiced small Go programs to understand:
+i).React
 
-* Printing output using `fmt.Println()`.
-* Declaring and using variables.
-* Creating and calling functions.
-* Using conditional statements and loops.
-* Creating structs and accessing their fields.
-* Handling errors using Go's `error` type.
-* Creating simple goroutines.
-* Understanding basic HTTP server structure.
-* Working with JSON data.
+Created a simple counter component.
 
-4. How I Implemented It
+**File:** `src/Counter.jsx`
 
-I used the Go programming language and practiced each concept with small programs.
+```jsx
+import { useState } from "react";
 
-For example, I created functions, structs, and goroutines separately to understand how they work. I also practiced the standard Go packages such as `fmt`, `net/http`, and `encoding/json`.
+function Counter() {
+    const [count, setCount] = useState(0);
 
-I ran the programs locally, checked the output, and modified the code to understand the concepts better.
+    return (
+        <div>
+            <h2>Count: {count}</h2>
+            <button onClick={() => setCount(count + 1)}>
+                Increase
+            </button>
+        </div>
+    );
+}
 
-5. Problems / Errors Faced
+export default Counter;
+```
 
-Some difficulties I faced today were:
+**Output:**
 
-* Understanding Go syntax because it is different from Java and Python.
-* Understanding the difference between structs and classes.
-* Understanding pointers and their usage.
-* Understanding how goroutines work.
-* Understanding error handling without traditional `try-catch`.
-* Understanding how packages and modules are organized.
+```text
+Count: 0
+Count: 1
+Count: 2
+```
 
-6. How I Solved Them
+ii).PostgreSQL
 
-I solved these problems by:
+Created a student table and inserted sample data.
 
-* Practicing each concept with very small programs.
-* Comparing Go concepts with programming concepts I already know.
-* Reading examples and understanding the syntax step by step.
-* Running the programs frequently to check the output.
-* Debugging errors by reading the compiler error messages.
-* Rewriting examples instead of only reading the theory.
+```sql
+CREATE TABLE students (
+    id SERIAL PRIMARY KEY,
+    name VARCHAR(100),
+    age INT
+);
 
-7. What I Plan to Work on Next
+INSERT INTO students (name, age)
+VALUES ('John', 21);
 
-Next, I plan to practice Go more deeply, especially:
+SELECT * FROM students;
+```
 
-* Advanced functions
-* Structs and interfaces
-* Pointers
-* Packages and modules
-* Error handling
-* Goroutines and concurrency
-* Channels
-* HTTP servers
-* REST API development
-* JSON handling
-* PostgreSQL database connection
+**Output:**
 
-My goal is to build a **simple REST API using Go and PostgreSQL** after completing the fundamentals.
+```text
+id | name | age
+1  | John | 21
+```
+
+4).How I Implemented It
+
+* Created a basic React component.
+* Used `useState()` to update the counter.
+* Created a PostgreSQL database and table.
+* Practiced basic SQL queries.
+* Tested the output after each implementation.
+
+5).Problems / Errors Faced
+
+* Initially found React JSX and `useState()` confusing.
+* Had some difficulty understanding SQL syntax and table creation.
+
+6).How I Solved Them
+
+* Practiced with small examples.
+* Checked errors and corrected the syntax.
+* Ran each program/query separately to understand the output.
+
+7).What I Plan to Work on Next
+
+* React forms and `useEffect()`.
+* React Router.
+* API calls using Axios.
+* PostgreSQL `JOIN` and relationships.
+* Connect **React + Backend + PostgreSQL**.
