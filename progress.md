@@ -1,8 +1,4 @@
-# Daily Progress — Go Backend & Database
-
-## Date
-
-28 September 2026
+# Daily Progress -- 28 September 2026
 
 ## 1. What I Worked on Today
 
